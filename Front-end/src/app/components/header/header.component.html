@@ -1,0 +1,23 @@
+<header>
+    <div class="container">
+        <a routerLink="/" class="logo">E-commerce!</a>
+        <nav>
+            <ul>
+                <li *ngIf="!user">
+                    <a routerLink="/login">Login</a>
+                </li>
+                <li class="product-container" *ngIf="user">
+                    <a (click)="logout()">Logout</a>
+                    <div class="product">
+                        
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="/cart-page">
+                        Cart <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

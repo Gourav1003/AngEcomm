@@ -1,0 +1,40 @@
+<p>cart-page works!</p>
+<app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
+
+<div class="container">
+<ul>
+  <li *ngFor="let cartItem of cart.items">
+
+   
+    <div>
+      <img [src]="cartItem.product.image_url" [alt]="cartItem.product.title">
+    </div>
+    <div>
+      <a routerLink="/product/{{cartItem.product.title}}">
+        {{cartItem.product.title}}
+      </a>
+    </div>
+    <div>
+      Quantity : {{cartItem.quantity}}
+    </div>
+    <div>
+      
+      {{cartItem.product.price | currency}}
+    </div>
+
+    <div>
+      <button class="remove-button" (click)="removeFromCart(cartItem.product._id)">
+        Remove
+      </button>
+    </div>
+  </li>
+</ul>
+<div class="checkout">
+  <div>
+    <div class="products-count">{{totalCount}}</div>
+    <div class="total-price">{{totalPrice|currency}}</div>
+  </div>
+
+  <a routerLink="/checkout">Proceed to Checkout</a>
+</div>
+</div>

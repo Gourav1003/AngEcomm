@@ -1,0 +1,62 @@
+header{
+    position: relative;
+    background: white;
+    padding: 0;
+    border-bottom: 1px solid red;
+}
+
+a:hover{
+    background: red;
+    color: white;
+    cursor:pointer;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+a.logo{
+    font-weight: bold;
+    padding: 1rem;
+}
+
+ul{
+    display: flex;
+    list-style-type:none;
+    margin: 0;
+}
+
+ul a{
+    padding: 1rem;
+    display: inline-block;
+}
+
+a span{
+    background: red;
+    color: white;
+    padding: 0.1rem 0.45rem;
+    border-radius: 100rem;
+    font-size: 0.9rem;
+}
+
+.product-container{
+    position: relative;
+}
+
+.product{
+    position: relative;
+    z-index: 1;
+    background: whitesmoke;
+    display: none;
+}
+
+.product-container:hover .product{
+    display: block;
+}
+
+.product a{
+    width: 100%;
+    min-width: 8rem;
+}
